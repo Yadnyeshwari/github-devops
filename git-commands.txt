@@ -1,0 +1,48 @@
+    git status
+    gti add
+    git add
+    git add .
+    git status
+    git status
+   git status
+   git add test.py
+   git add test.py
+   mv .git/test.py test.py
+   git status
+   git add test.py
+   git status
+   git rm --cached test.py
+   git status
+   git add .
+   git status
+   git commit -m "Added testing file"
+   git config --global user.email "bhakreyadnyeshwari@gmail.com"
+   git config user.name "Yadnyeshwari"
+   Omit --global
+   git config --global user.email "bhakreyadnyeshwari@gmail.com"
+   git config user.name "Yadnyeshwari Bhakre"
+   git config --list
+   git commit -m "Added testing file"
+   git status
+   clear
+   git rm test.py
+   ls
+   ls -force
+   git status
+   git restore test.py
+   git restore --staged test.py
+   git status
+   git restore test.py
+   git status
+      ls
+   git remote add origin <git clone link>
+    git remote -v
+   git remote add origin <git clone link>
+   git remote ste-url origin
+   git remote set-url origin
+   git remote -v
+   git remote set-url origin 
+   git remote -v
+   git push origin master
+   git commit -m "git added"
+   git push origin master
