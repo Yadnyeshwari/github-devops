@@ -1,1 +1,20 @@
 HEAD ---> it represents the latest commit in your repository (latest changes) 
+If you want to check your code before commiting, either that code is containing any error and system does not allow you to commit until you resolve that code for that you have to use pre-commit hooks.
+*Steps : 1.got to .git directory --> hooks---> create pre-commit---> give execute permission to the file (chmod 777 pre-commit or chmod +x pre-commit) file (inside that)
+optional----> if permission are not approving (1. dos2unix .git/hooks/pre-commit 2>/dev/null || echo "dos2unix not installed, continuing"
+    2. head -n 1 .git/hooks/pre-commit || true 3. chmod +x pre-commit) 
+
+                     files=$(git diff --cached --name-only --diff-filter=ACM | grep '\.py$')
+
+                     flake8 $files 
+                  (before using this you have to install flake8 in your system #this is used to check the errors in your python code
+                                command is : pip install flake8) 
+                 if you want stop the commit to file if that file contains any api keys , passwords or secret use this:
+                  
+                       if git grep -q "password\|secret_key\|API_KEY" $(git diff --cached --name-only); then
+                           echo "It contains some sensitive information. Ccheck before commiting"
+                           exit 1
+                       fi
+
+Step : after that git add <filename>
+                  git commit -m "message" <filename>
